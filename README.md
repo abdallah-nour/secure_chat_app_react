@@ -18,7 +18,7 @@
 2. GET - api/users/users/userId/role - Returns Users Array other than the given User with given role
 
 ## Web Sockets
-1. Establishing WS Connection: `let webSocket = new WebSocket("ws://localhost:3000/chat")`
+1. Establishing WS Connection: `let webSocket = new WebSocket("ws://localhost:4000/chat")`
 2. Event Listeners of the webSocket Object:
 ```
     webSocket.onopen = () => {

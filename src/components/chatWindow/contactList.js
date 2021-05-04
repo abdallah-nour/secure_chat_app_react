@@ -36,14 +36,15 @@ export default class ContactList extends Component {
     }
 
     getContacts() {
-
-        const contactDetails = this.state.users.map(user =>
-            <div className="user flex mt-2 p-2 border-b " id={user._id} key={user._id} onClick={() => this.setSelectedUser(user)}>
+      const contactDetails = this.state.users.map((user, index) =>{
+        console.log(user);
+        return (<div key={index} className="user flex mt-2 p-2 border-b " id={user._id} onClick={() => this.setSelectedUser(user)}>
                 <div className="w-1/4 rounded-full relative h-12 text-center">
-                    <img className="profile-picture absolute h-full object-cover self-center" src={"/images/" + user.img} alt="dp" />
+                    <img className="profile-picture absolute h-full object-cover self-center" src={user.img} alt="dp" />
                 </div>
                 {this.getLastMessageDetails(user)}
-            </div>
+            </div>);
+            }
         )
         return (contactDetails)
     }

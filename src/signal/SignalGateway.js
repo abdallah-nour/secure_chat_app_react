@@ -37,6 +37,7 @@ export class SignalServerStore {
      */
     getPreKeyBundle(userId) {
         let storageBundle = JSON.parse(localStorage.getItem(userId))
+        storageBundle = {}; // delete this one
         storageBundle.identityKey = util.base64ToArrayBuffer(storageBundle.identityKey)
         storageBundle.preKey.publicKey = util.base64ToArrayBuffer(storageBundle.preKey.publicKey)
         storageBundle.signedPreKey.publicKey = util.base64ToArrayBuffer(storageBundle.signedPreKey.publicKey)

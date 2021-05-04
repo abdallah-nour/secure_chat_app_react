@@ -34,13 +34,13 @@ export default class MessageBox extends Component {
                         <div className=" w-max bg-gray-200 text-black shadow-lg clear-both p-2 rounded-md">
                             {message.message}</div>
                         <div className="w-16 rounded-full relative h-16 mx-2 px-2">
-                            <img className="profile-picture absolute h-full object-cover self-center p-2" src={"/images/" + this.props.loggedInUserDP} alt="dp" />
+                            <img className="profile-picture absolute h-full object-cover self-center p-2" src={this.props.loggedInUserDP} alt="dp" />
                         </div>
                     </div>)
                 else
                     return (<div key={message.messageId} className="incoming w-3/4 flex my-2">
                         <div className="w-16 rounded-full relative h-16 mx-2 px-2">
-                            <img className="profile-picture absolute h-full object-cover self-center p-2" src={"/images/" + this.props.selectedUser.img} alt="dp" />
+                            <img className="profile-picture absolute h-full object-cover self-center p-2" src={this.props.selectedUser.img} alt="dp" />
                         </div>
                         <div className=" w-max bg-gray-900 text-white shadow-lg clear-both p-2 rounded-md">
                             {message.message}</div>
@@ -57,7 +57,7 @@ export default class MessageBox extends Component {
                     {/* Contact Options Bar */}
                     <div className="user-bar flex w-full py-4 absolute inset-x-0 top-0 shadow-lg">
                         <div className="w-12 rounded-full relative h-12 text-center mx-2">
-                            <img className="profile-picture absolute h-full object-cover self-center p-2" src={"/images/" + this.props.selectedUser.img} alt="dp" />
+                            <img className="profile-picture absolute h-full object-cover self-center p-2" src={this.props.selectedUser.img} alt="dp" />
                         </div>
                         <div className="contact-name font-bold w-3/4 float-left py-2">{this.props.selectedUser.name}</div>
                         <div className="icons w-1/4 text-right mr-4">
